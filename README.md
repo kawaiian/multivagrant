@@ -1,7 +1,7 @@
 # multivagrant
 Vagrant template of a 3-node VM cluster.
 
-The goal is provide a basic Vagrantfile that provisions three machines with a commaon hosts file for interconnectivity.
+The goal is provide a basic Vagrantfile that provisions three machines with a common `hosts` file for out-of-the-box DNS name-based interconnectivity.
 
 ### Use
 
