@@ -11,6 +11,8 @@ This Vagrantfile includes the `GetoptLong` ruby library, and thus the `vagrant` 
 
 Which will create a 3-node ubuntu (xenial64) cluster.
 
+**Keep in mind you will need to append EVERY `vagrant` command (up, destroy, status) with the `--machine` option.**
+
 ### Details
 
 This setup uses Vagrant's file provisioner and inline shell provisioner to move the `hosts` file from the root directory to `/etc/hosts` file. The hosts reside on a private network, `192.168.56.0/24`. Each host is simply named `host$` where `$` is the associated host number. No other applications or files are installed, beyond what's included in the base Vagrant box.
