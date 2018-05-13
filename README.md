@@ -1,11 +1,13 @@
 # multivagrant
-Vagrant template of a 3-node Ubuntu VM cluster.
+Vagrant template of a 3-node VM cluster.
 
 The goal is provide a basic Vagrantfile that provisions three machines with a commaon hosts file for interconnectivity.
 
 ### Use
 
-`vagrant up`
+This Vagrantfile includes the `GetoptLong` ruby library, and thus the `vagrant` command expects the `--machine` option to be passed with the desired Vagrant box. For example:  
+
+`vagrant --machine="ubuntu/xenial64" up`
 
 Which will create a 3-node ubuntu (xenial64) cluster.
 
