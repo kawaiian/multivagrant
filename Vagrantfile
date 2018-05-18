@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
         host1.vm.provision "file", source: "hosts", destination: "/tmp/hosts"
 
         host1.vm.provision "shell", inline: "mv /tmp/hosts /etc/hosts"
+        host1.vm.provision "shell", inline: "sudo hostname host1.akira"
     end
     config.vm.define "host2" do |host2|
         host2.vm.box = "#{machine}"
@@ -29,6 +30,7 @@ Vagrant.configure("2") do |config|
         host2.vm.provision "file", source: "hosts", destination: "/tmp/hosts"
 
         host2.vm.provision "shell", inline: "mv /tmp/hosts /etc/hosts"
+        host2.vm.provision "shell", inline: "sudo hostname host2.akira"
     end
     config.vm.define "host3" do |host3|
         host3.vm.box = "#{machine}"
@@ -37,6 +39,7 @@ Vagrant.configure("2") do |config|
         host3.vm.provision "file", source: "hosts", destination: "/tmp/hosts"
 
         host3.vm.provision "shell", inline: "mv /tmp/hosts /etc/hosts"
+        host3.vm.provision "shell", inline: "sudo hostname host3.akira"
     end
 
 end
